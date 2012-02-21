@@ -1,0 +1,82 @@
+﻿<ApuntaNotas_ViewModel:CategoryEditorViewModel xmlns:ApuntaNotas_ViewModel="clr-namespace:ApuntaNotas.ViewModel" xmlns:GalaSoft_MvvmLight_Command="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.WPF4" xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:ApuntaNotas_Model="clr-namespace:ApuntaNotas.Model" DeleteNotesToo="True" IsInDesignMode="False" IsInDesignModeStatic="True" IsValid="False" OnCategoryUpdate="True">
+	<ApuntaNotas_ViewModel:CategoryEditorViewModel.AcceptCategoryCommand>
+		<GalaSoft_MvvmLight_Command:RelayCommand/>
+	</ApuntaNotas_ViewModel:CategoryEditorViewModel.AcceptCategoryCommand>
+	<ApuntaNotas_ViewModel:CategoryEditorViewModel.CategoryIds>
+		<System:Guid/>
+		<System:Guid/>
+		<System:Guid/>
+		<System:Guid/>
+		<System:Guid/>
+		<System:Guid/>
+		<System:Guid/>
+		<System:Guid/>
+		<System:Guid/>
+		<System:Guid/>
+	</ApuntaNotas_ViewModel:CategoryEditorViewModel.CategoryIds>
+	<ApuntaNotas_ViewModel:CategoryEditorViewModel.Categories>
+		<ApuntaNotas_Model:Category BackgroundColor="#FF110000" FontColor="#FF110000" Name="Aenean vestibulum">
+			<ApuntaNotas_Model:Category.Id>
+				<System:Guid/>
+			</ApuntaNotas_Model:Category.Id>
+		</ApuntaNotas_Model:Category>
+		<ApuntaNotas_Model:Category BackgroundColor="#FF110000" FontColor="#FF110000" Name="Mauris quisque adipiscing nullam amet">
+			<ApuntaNotas_Model:Category.Id>
+				<System:Guid/>
+			</ApuntaNotas_Model:Category.Id>
+		</ApuntaNotas_Model:Category>
+		<ApuntaNotas_Model:Category BackgroundColor="#FF110000" FontColor="#FF110000" Name="Vestibulum aptent vivamus nam curae">
+			<ApuntaNotas_Model:Category.Id>
+				<System:Guid/>
+			</ApuntaNotas_Model:Category.Id>
+		</ApuntaNotas_Model:Category>
+		<ApuntaNotas_Model:Category BackgroundColor="#FF110000" FontColor="#FF110000" Name="Aliquam aliquet enim lorem">
+			<ApuntaNotas_Model:Category.Id>
+				<System:Guid/>
+			</ApuntaNotas_Model:Category.Id>
+		</ApuntaNotas_Model:Category>
+	</ApuntaNotas_ViewModel:CategoryEditorViewModel.Categories>
+	<ApuntaNotas_ViewModel:CategoryEditorViewModel.CategoryBeenSelected>
+		<GalaSoft_MvvmLight_Command:RelayCommand/>
+	</ApuntaNotas_ViewModel:CategoryEditorViewModel.CategoryBeenSelected>
+	<ApuntaNotas_ViewModel:CategoryEditorViewModel.NotesToTrash>
+		<System:Guid/>
+		<System:Guid/>
+		<System:Guid/>
+		<System:Guid/>
+		<System:Guid/>
+		<System:Guid/>
+		<System:Guid/>
+		<System:Guid/>
+		<System:Guid/>
+		<System:Guid/>
+	</ApuntaNotas_ViewModel:CategoryEditorViewModel.NotesToTrash>
+	<ApuntaNotas_ViewModel:CategoryEditorViewModel.NotesToDelete>
+		<System:Guid/>
+		<System:Guid/>
+		<System:Guid/>
+		<System:Guid/>
+		<System:Guid/>
+		<System:Guid/>
+		<System:Guid/>
+		<System:Guid/>
+		<System:Guid/>
+		<System:Guid/>
+	</ApuntaNotas_ViewModel:CategoryEditorViewModel.NotesToDelete>
+	<ApuntaNotas_ViewModel:CategoryEditorViewModel.NewCategoryCommand>
+		<GalaSoft_MvvmLight_Command:RelayCommand/>
+	</ApuntaNotas_ViewModel:CategoryEditorViewModel.NewCategoryCommand>
+	<ApuntaNotas_ViewModel:CategoryEditorViewModel.SelectFontColorCommand>
+		<GalaSoft_MvvmLight_Command:RelayCommand/>
+	</ApuntaNotas_ViewModel:CategoryEditorViewModel.SelectFontColorCommand>
+	<ApuntaNotas_ViewModel:CategoryEditorViewModel.SelectedCategory>
+		<ApuntaNotas_Model:Category BackgroundColor="#FF110000" FontColor="#FFFFFFFF" Name="Suscipit adipiscing magna">
+			<ApuntaNotas_Model:Category.Id>
+				<System:Guid/>
+			</ApuntaNotas_Model:Category.Id>
+		</ApuntaNotas_Model:Category>
+	</ApuntaNotas_ViewModel:CategoryEditorViewModel.SelectedCategory>
+	<ApuntaNotas_ViewModel:CategoryEditorViewModel.SelectBgColorCommand>
+		<GalaSoft_MvvmLight_Command:RelayCommand/>
+	</ApuntaNotas_ViewModel:CategoryEditorViewModel.SelectBgColorCommand>
+</ApuntaNotas_ViewModel:CategoryEditorViewModel>

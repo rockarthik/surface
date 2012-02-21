@@ -1,0 +1,89 @@
+﻿<ApuntaNotas_ViewModel:MainViewModel xmlns:ApuntaNotas_ViewModel="clr-namespace:ApuntaNotas.ViewModel" xmlns:ApuntaNotas_Model="clr-namespace:ApuntaNotas.Model" xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:GalaSoft_MvvmLight_Command="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.WPF4" IsInDesignMode="True" IsInDesignModeStatic="False">
+	<ApuntaNotas_ViewModel:MainViewModel.ActualNote>
+		<ApuntaNotas_Model:Note Content="Duis adipiscing parturient aenean" Date="Consequat quisque maecenas">
+			<ApuntaNotas_Model:Note.Category>
+				<ApuntaNotas_Model:Category BackgroundColor="Class cras" FontColor="#FFFFFFFF" Name="Integer phasellus vestibulum nam">
+					<ApuntaNotas_Model:Category.Id>
+						<System:Guid/>
+					</ApuntaNotas_Model:Category.Id>
+				</ApuntaNotas_Model:Category>
+			</ApuntaNotas_Model:Note.Category>
+		</ApuntaNotas_Model:Note>
+	</ApuntaNotas_ViewModel:MainViewModel.ActualNote>
+	<ApuntaNotas_ViewModel:MainViewModel.AddNoteCommand>
+		<GalaSoft_MvvmLight_Command:RelayCommand/>
+	</ApuntaNotas_ViewModel:MainViewModel.AddNoteCommand>
+	<ApuntaNotas_ViewModel:MainViewModel.CategoryOptionsCommand>
+		<GalaSoft_MvvmLight_Command:RelayCommand/>
+	</ApuntaNotas_ViewModel:MainViewModel.CategoryOptionsCommand>
+	<ApuntaNotas_ViewModel:MainViewModel.Categories>
+		<ApuntaNotas_Model:Category BackgroundColor="#FF110000" FontColor="#FFFFFFFF" Name="Sed curae convallis donec">
+			<ApuntaNotas_Model:Category.Id>
+				<System:Guid/>
+			</ApuntaNotas_Model:Category.Id>
+		</ApuntaNotas_Model:Category>
+		<ApuntaNotas_Model:Category BackgroundColor="#FF110000" FontColor="#FFFFFFFF" Name="Dis ante vestibulum">
+			<ApuntaNotas_Model:Category.Id>
+				<System:Guid/>
+			</ApuntaNotas_Model:Category.Id>
+		</ApuntaNotas_Model:Category>
+		<ApuntaNotas_Model:Category BackgroundColor="#FF110000" FontColor="#FFFFFFFF" Name="Fringilla arcu eleifend">
+			<ApuntaNotas_Model:Category.Id>
+				<System:Guid/>
+			</ApuntaNotas_Model:Category.Id>
+		</ApuntaNotas_Model:Category>
+		<ApuntaNotas_Model:Category BackgroundColor="#FF110000" FontColor="#FFFFFFFF" Name="Est hendrerit">
+			<ApuntaNotas_Model:Category.Id>
+				<System:Guid/>
+			</ApuntaNotas_Model:Category.Id>
+		</ApuntaNotas_Model:Category>
+	</ApuntaNotas_ViewModel:MainViewModel.Categories>
+	<ApuntaNotas_ViewModel:MainViewModel.DeleteAllNotesCommand>
+		<GalaSoft_MvvmLight_Command:RelayCommand/>
+	</ApuntaNotas_ViewModel:MainViewModel.DeleteAllNotesCommand>
+	<ApuntaNotas_ViewModel:MainViewModel.Notes>
+		<ApuntaNotas_Model:Note Content="Luctus nisl sed dis" Date="02/22/2010">
+			<ApuntaNotas_Model:Note.Category>
+				<ApuntaNotas_Model:Category BackgroundColor="#FF110000" FontColor="#FFFFFFFF" Name="Phasellus consequat">
+					<ApuntaNotas_Model:Category.Id>
+						<System:Guid/>
+					</ApuntaNotas_Model:Category.Id>
+				</ApuntaNotas_Model:Category>
+			</ApuntaNotas_Model:Note.Category>
+		</ApuntaNotas_Model:Note>
+		<ApuntaNotas_Model:Note Content="Magna volutpat dignissim" Date="02/22/2010">
+			<ApuntaNotas_Model:Note.Category>
+				<ApuntaNotas_Model:Category BackgroundColor="#FF110000" FontColor="#FFFFFFFF" Name="Laoreet vehicula">
+					<ApuntaNotas_Model:Category.Id>
+						<System:Guid/>
+					</ApuntaNotas_Model:Category.Id>
+				</ApuntaNotas_Model:Category>
+			</ApuntaNotas_Model:Note.Category>
+		</ApuntaNotas_Model:Note>
+		<ApuntaNotas_Model:Note Content="Facilisis mollis pede" Date="02/22/2010">
+			<ApuntaNotas_Model:Note.Category>
+				<ApuntaNotas_Model:Category BackgroundColor="#FF84EEAA" FontColor="#FFFFFFFF" Name="Bibendum mattis mauris">
+					<ApuntaNotas_Model:Category.Id>
+						<System:Guid/>
+					</ApuntaNotas_Model:Category.Id>
+				</ApuntaNotas_Model:Category>
+			</ApuntaNotas_Model:Note.Category>
+		</ApuntaNotas_Model:Note>
+		<ApuntaNotas_Model:Note Content="Nostra facilisi massa" Date="02/22/2010">
+			<ApuntaNotas_Model:Note.Category>
+				<ApuntaNotas_Model:Category BackgroundColor="#FF110000" FontColor="#FFFFFFFF" Name="Fringilla urna cras">
+					<ApuntaNotas_Model:Category.Id>
+						<System:Guid/>
+					</ApuntaNotas_Model:Category.Id>
+				</ApuntaNotas_Model:Category>
+			</ApuntaNotas_Model:Note.Category>
+		</ApuntaNotas_Model:Note>
+	</ApuntaNotas_ViewModel:MainViewModel.Notes>
+	<ApuntaNotas_ViewModel:MainViewModel.SelectedCategory>
+		<ApuntaNotas_Model:Category BackgroundColor="#FF110000" FontColor="#FFFFFFFF" Name="Phasellus mauris consequat">
+			<ApuntaNotas_Model:Category.Id>
+				<System:Guid/>
+			</ApuntaNotas_Model:Category.Id>
+		</ApuntaNotas_Model:Category>
+	</ApuntaNotas_ViewModel:MainViewModel.SelectedCategory>
+</ApuntaNotas_ViewModel:MainViewModel>

@@ -1,0 +1,103 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="ApuntaNotas.MainWindow" Icon="Icons/app_48.ico"
+        Title="Apunta Notas"
+        Height="480"
+        x:Name="Ventana"
+        Width="640"
+        Background="Beige"
+        DataContext="{Binding Main, Source={StaticResource Locator}}"
+		d:DataContext="{d:DesignData /SampleData/MainViewModelSampleData.xaml}">
+    
+    <DockPanel>
+        <StatusBar Background="#eaeaa0" DockPanel.Dock="Bottom"
+                   Height="30">
+            <StatusBarItem DockPanel.Dock="Right">
+                <Slider x:Name="zoomSlider" Width="125"
+                        Minimum="1" Maximum="4"
+                        Value="1" />
+            </StatusBarItem>
+            <StatusBarItem DockPanel.Dock="Right" HorizontalContentAlignment="Right">
+                <TextBlock Text="{Binding Zoom, Source={StaticResource LocStrings}}" />
+            </StatusBarItem>
+            <StatusBarItem Margin="5 0 0 0" DockPanel.Dock="Left">
+                <Hyperlink Command="{Binding CategoryOptionsCommand}"><InlineUIContainer>
+                		<TextBlock Text="{Binding CategoryOptions, Source={StaticResource LocStrings}}" />
+                	</InlineUIContainer></Hyperlink>
+            </StatusBarItem>
+        </StatusBar>
+        <Grid DockPanel.Dock="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <ComboBox Height="20" MinWidth="75" x:Name="cmbCategory"
+                      Margin="7 0 0 0" ItemsSource="{Binding Categories}"
+                      SelectedItem="{Binding SelectedCategory}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <TextBox Margin="7" x:Name="txtInput"
+                     Text="{Binding ActualNote.Content}" Grid.Column="1" />
+            <Button Margin="0 7 7 7" Content="{Binding AddNote, Source={StaticResource LocStrings}}"
+                    Grid.Column="2" MinWidth="75" IsDefault="True" Click="OnAdd_Clicked"
+                    Command="{Binding AddNoteCommand}" />
+        </Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <ItemsControl Background="Beige" Padding="15" Tag="Hello" x:Name="IC"
+                      ItemsSource="{Binding Notes}">
+                <ItemsControl.LayoutTransform>
+                    <ScaleTransform ScaleX="{Binding Value, ElementName=zoomSlider}" ScaleY="{Binding Value, ElementName=zoomSlider}" />
+                </ItemsControl.LayoutTransform>
+                <ItemsControl.ContextMenu>
+                    <ContextMenu x:Name="icCM">
+                        <MenuItem Header="{Binding DeleteAllNotes, Source={StaticResource LocStrings}}" Command="{Binding DeleteAllNotesCommand}" />
+                    </ContextMenu>
+                </ItemsControl.ContextMenu>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.ContextMenu>
+                                <ContextMenu x:Name="cm">
+                                    <MenuItem Header="{Binding Edit, Source={StaticResource LocStrings}}" Click="EditNote_Click"/>
+                                    <MenuItem Header="{Binding Delete, Source={StaticResource LocStrings}}" Click="DeleteNote_Click" />
+                                    <Separator />
+                                    <ComboBox Loaded="CmbNoteCategory_Loaded" SelectionChanged="CmbNoteCategory_SelectionChanged">
+                                        <ComboBox.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Name}" />
+                                            </DataTemplate>
+                                        </ComboBox.ItemTemplate>
+                                    </ComboBox>
+                                </ContextMenu>
+                            </Grid.ContextMenu>
+                            <Border Style="{StaticResource NoteBorderStyle}"
+                                Background="{Binding Category.BackgroundColor}">
+                                <TextBlock Text="{Binding Date}" Foreground="{Binding Category.FontColor}" />
+                            </Border>
+                            <Border x:Name="noteBorder" Grid.Column="1" Style="{StaticResource NoteBorderStyle}"
+                                Background="{Binding Category.BackgroundColor}">
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Content}" TextWrapping="Wrap" Foreground="{Binding Category.FontColor}" />
+                                    <Line X1="0" Y1="0" X2="{Binding ActualWidth, ElementName=noteBorder}" Y2="0" Stroke="{Binding Category.FontColor}" StrokeThickness="1" Margin="0 5 0 0"/>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                        <TextBlock Text="{Binding Category.Name}" FontSize="10" Foreground="{Binding Category.FontColor}" />
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+    </DockPanel>    
+</Window>
